@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
-
+import React,{useState} from 'react'
+import Button from './component/button/Button';
+import Toogle from './component/toogle/Toogle';
+import Toogl from './component/toogl/Toogl';
+import Form from './component/form/Form';
 function App() {
+  const[data,setData]=useState()
+  function getData(val){
+     console.log(val.target.value)
+     setData(val.target.value)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <input type="text" onChange={getData} />
+     <h1>name:{data}</h1>
+
+     <Button />
+
+     <Toogle />
+     <Toogl />
+     <Form />
     </div>
+
   );
 }
 
