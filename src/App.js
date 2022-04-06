@@ -5,6 +5,7 @@ import Button from './component/button/Button';
 import Toogle from './component/toogle/Toogle';
 import Toogl from './component/toogl/Toogl';
 import Form from './component/form/Form';
+import Validation from './component/validation/Validation';
 function App() {
   const[data,setData]=useState()
   function getData(val){
@@ -21,6 +22,7 @@ function App() {
      <Toogle />
      <Toogl />
      <Form />
+     <Validation />
     </div>
 
   );
